@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResponseGen</title>
+    <link rel="stylesheet" href="../static/css/output.css">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #1b1b1b;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #0e0e0e;
+            border-radius: 50px;
+        }
+
+        .message {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .message.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .welcome {
+            opacity: 0;
+            transition: opacity 2s;
+        }
+    </style>
+</head>
+               
+<body onload="document.querySelector('.welcome').style.opacity='1'">
+    <!-- main container -->
+    <div class="container flex items-end max-w-full h-screen bg-[#272727]">
+
+        <!-- navbar starts here -->
+         <nav class="w-full h-[60px] fixed top-0 left-0 flex justify-between items-center text-white">
+            <h1 class="text-3xl ml-5">ResponseGen</h1>
+            <div>
+                <button class="w-20 h-[40px] bg-[#2197a2] rounded-lg mr-3">Contact</button>
+                <button class="w-20 h-[40px] bg-[#2197a2] rounded-lg mr-5">About</button>
+            </div>
+         </nav>
+
+        <!-- sidebar starts here -->
+        <aside class="w-1/4 h-5/6 ml-10 mb-5 rounded-lg bg-[#1b1b1b] overflow-auto text-white hidden md:block">
+
+        </aside>
+
+        <!-- right container starts here -->
+        <div class="right-container h-full w-full flex flex-col items-center justify-end text-white">
+            <!-- Welcome msg here  -->
+            <div class="welcome-msg h-4/5 w-full flex justify-center items-center duration-200 md:h-3/4">
+                <h1 class="welcome text-6xl">Welcome to ResponseGen</h1>
+            </div>
+
+            <!-- main content here -->
+            <div class="chat h-4/5 w-full flex-col overflow-auto md:h-3/4" style="display: none;">
+                <!-- <div class="w-full h-fit flex justify-end mb-5">
+                    <div
+                        class="bg-[#4bb85c] h-fit flex p-5 rounded-3xl md:mr-12 md:max-w-4xl lg:max-w-5xl ques">
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+                <div class="w-full h-fit flex justify-start mb-5">
+                    <div
+                        class="bg-[#232323] h-fit p-5 rounded-3xl md:ml-12  lg:max-w-5xl ans prose text-white">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, velit.
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- form starts here -->
+            <form class="mt-[25px] w-full flex items-center justify-center mb-5 prompt-form">
+                <input type="text"
+                    class="w-5/6 h-[50px] rounded-lg bg-[#272727] border-2 border-[#504f4f] border-solid pl-4 prompt-input "
+                    placeholder="Enter your prompt">
+                <button type="submit" class="w-20 h-[50px] bg-[#2197a2] rounded-lg ml-2">Enter</button>
+            </form>
+        </div>
+    </div>
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
