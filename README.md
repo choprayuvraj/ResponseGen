@@ -38,12 +38,14 @@ To run ResponseGen locally, follow these steps:
     python main.py
     ```
 
-## Usuage
-    -Type your question or prompt in the input box.
-    -Press "Enter" or click the button to submit.
-    -Wait for ResponseGen to generate a response.
-    -Scroll through the chat to view the generated responses.
+## Usage:
+- Type your question or prompt in the input box.
+- Press "Enter" or click the button to submit.
+- Wait for ResponseGen to generate a response.
+- Scroll through the chat to view the generated responses.
 
 ### Notes:
-    - Replace `your-username` in the clone URL with your GitHub username or organization name.
-    - Update `your_gemini_api_key_here` with your actual Gemini API key in the `.env` file.
+- Replace `your-username` in the clone URL with your GitHub username or organization name.
+- Update `your_gemini_api_key_here` with your actual Gemini API key in the `.env` file.
+
+By Yuvraj Chopra
